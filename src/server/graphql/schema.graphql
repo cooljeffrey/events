@@ -1,0 +1,22 @@
+type Query {
+  listEvents(keyword: String, date: String, city: String, state: String, country: String): [Event]!
+  getEventByIndex(index: Int!): Event
+}
+
+type Location {
+  City: String!
+  State: String!
+  Country: String!
+}
+
+type Seat {
+  id: String!
+}
+
+type Event {
+  Title: String!
+  Time: String!
+  Image: String!
+  Location: Location!
+  AvailableSeats: [Seat]
+}

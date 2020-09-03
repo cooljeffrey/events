@@ -1,5 +1,6 @@
 import { Event } from './model/Event';
 import { initialEvents } from './data/data';
+import { QueryParams } from './model/QueryParams';
 
 export const isObjectEmpty = (obj: object): boolean => {
   return obj === null || undefined
@@ -14,54 +15,54 @@ export const isObjectEmpty = (obj: object): boolean => {
       })();
 };
 
-export const listEvents = (query?: { [name: string]: string }): Event[] => {
+export const listEvents = (query?: QueryParams): Event[] => {
   if (isObjectEmpty(query as object)) {
     return initialEvents;
   }
 
   let result: Event[] = [...initialEvents];
-  if (query && query['keyword']) {
+  if (query && query.keyword) {
     result = initialEvents.filter(
       (value) =>
         value.Title &&
-        value.Title.toLowerCase().indexOf(query['keyword'].toLowerCase()) >= 0
+        value.Title.toLowerCase().indexOf(query.keyword!.toLowerCase()) >= 0
     );
   }
 
-  if (query && query['city']) {
+  if (query && query.city) {
     result = result.filter(
       (value) =>
         value.Location &&
         value.Location.City &&
-        value.Location.City.toLowerCase() === query['city'].toLowerCase()
+        value.Location.City.toLowerCase() === query.city!.toLowerCase()
     );
   }
 
-  if (query && query['state']) {
+  if (query && query.state) {
     result = result.filter(
       (value) =>
         value.Location &&
         value.Location.State &&
-        value.Location.State.toLowerCase() === query['state'].toLowerCase()
+        value.Location.State.toLowerCase() === query.state!.toLowerCase()
     );
   }
 
-  if (query && query['country']) {
+  if (query && query.country) {
     result = result.filter(
       (value) =>
         value.Location &&
         value.Location.Country &&
-        value.Location.Country.toLowerCase() === query['country'].toLowerCase()
+        value.Location.Country.toLowerCase() === query.country!.toLowerCase()
     );
   }
 
-  if (query && query['date']) {
+  if (query && query.date) {
     result = result.filter(
       (value) =>
         value &&
         value.Time &&
         new Date(value.Time).toDateString() ===
-          new Date(query['date']).toDateString()
+          new Date(query.date!).toDateString()
     );
   }
 
