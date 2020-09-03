@@ -26,9 +26,10 @@
   "scripts": {
     "start:client": "react-scripts start",
     "build:client": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false",
+    "cover": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject",
-    "prettier": "prettier --single-quote --write '**/*.{ts,js,css,html}' '!build/**' '!dist/**'",
+    "prettier": "prettier --single-quote --write '**/*.{ts,js,css,html}' '!build/**' '!dist/**' '!coverage/**'",
     "build:server": "webpack --config webpack.config.ts",
     "start:server": "webpack --config webpack.config.ts --watch",
     "serve": "node dist/index",
