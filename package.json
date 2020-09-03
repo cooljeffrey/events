@@ -1,0 +1,72 @@
+{
+  "name": "react-express-skeleton",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=12.18.0",
+    "npm": ">=6.14.0"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "apollo-server-express": "^2.17.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.23.3",
+    "http-errors": "^1.8.0",
+    "morgan": "^1.10.0",
+    "react": "^16.13.1",
+    "react-app-polyfill": "^1.0.6",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3"
+  },
+  "scripts": {
+    "start:client": "react-scripts start",
+    "build:client": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prettier": "prettier --single-quote --write '**/*.{ts,js,css,html}' '!build/**' '!dist/**'",
+    "build:server": "webpack --config webpack.config.ts",
+    "start:server": "webpack --config webpack.config.ts --watch",
+    "serve": "node dist/index",
+    "build": "webpack --config webpack.config.ts && react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.2",
+    "@types/cors": "^2.8.7",
+    "@types/express": "^4.17.7",
+    "@types/helmet": "0.0.47",
+    "@types/jest": "^24.9.1",
+    "@types/morgan": "^1.9.1",
+    "@types/node": "^12.12.54",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@types/webpack": "^4.41.21",
+    "@types/webpack-node-externals": "^1.7.1",
+    "nodemon-webpack-plugin": "^4.3.2",
+    "prettier": "^2.1.1",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.7",
+    "webpack-cli": "^3.3.12",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
