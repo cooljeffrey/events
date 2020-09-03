@@ -7,6 +7,10 @@
     "npm": ">=6.14.0"
   },
   "dependencies": {
+    "@apollo/client": "^3.1.4",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@react-google-maps/api": "^1.9.12",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -29,7 +33,7 @@
     "test": "react-scripts test --watchAll=false",
     "cover": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject",
-    "prettier": "prettier --single-quote --write '**/*.{ts,js,css,html}' '!build/**' '!dist/**' '!coverage/**'",
+    "prettier": "prettier --single-quote --write '**/*.{ts,tsx,js,css,html}' '!build/**' '!dist/**' '!coverage/**'",
     "build:server": "webpack --config webpack.config.ts",
     "start:server": "webpack --config webpack.config.ts --watch",
     "serve": "node dist/index",
@@ -54,6 +58,7 @@
     "@types/cookie-parser": "^1.4.2",
     "@types/cors": "^2.8.7",
     "@types/express": "^4.17.7",
+    "@types/googlemaps": "^3.39.13",
     "@types/helmet": "0.0.47",
     "@types/jest": "^24.9.1",
     "@types/morgan": "^1.9.1",

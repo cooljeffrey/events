@@ -32,12 +32,10 @@ Runs prettier code formatting tool to formate the souce code.
 Builds frontend SPA.
 Frontend build result is in `build`, can be viewed by opening up `index.html`.
 
-
 ### `npm run build`
 
 Builds backend api service.
 Backend build result is in `dist`, can be run by `node index.js`
-
 
 ### `npm run build`
 
@@ -55,7 +53,6 @@ Run the following commands to serve both api and web app at http://localhost:500
 
 `CTRL + C` to terminate.
 
-
 ### Docker container
 
 To build and start the docker container :
@@ -70,13 +67,18 @@ To stop the container running, open up another terminal :
 
     docker stop events
 
+### Features
 
-### `npm run eject`
+1. Both frontend and backend implemented by Typescript.
+2. GraphQL API, supports filtering events list by keyword, date, city, state and country.
+3. UI implemented by React and Material UI.
+4. Supports IE 11.
+5. Integrated Google Map API ( with limitations due to billing ).
+6. Run as docker container.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### TODO
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Improve test coverage.
+2. Google Map API Key requires enabling billing.
+3. Add integration test using Cypress.
+4. Improve UI to allow filtering events list by existing API.
