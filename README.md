@@ -32,7 +32,7 @@ Runs prettier code formatting tool to formate the souce code.
 Builds frontend SPA.
 Frontend build result is in `build`, can be viewed by opening up `index.html`.
 
-### `npm run build`
+### `npm run build:server`
 
 Builds backend api service.
 Backend build result is in `dist`, can be run by `node index.js`
